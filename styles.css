@@ -1,0 +1,52 @@
+:root {
+    --body-text-color : #1e2e21;
+    --body-font: 'Neue Haas Grotesk Text Pro';
+}
+
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 3% 90% 7%;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: var(--main-color);
+    font-family: var(--body-font);
+}
+
+header {
+   
+    background-color: aliceblue;
+    align-items: center;
+
+}
+main{
+    background-color: red;
+}
+main iframe#map-embed {
+    height: max-content;
+    width: max-content;
+    height: 100%;
+    width: 100%;
+}
+
+footer {
+    align-items: center ;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    padding-left: 10px;
+
+}
+footer address {
+    
+}
