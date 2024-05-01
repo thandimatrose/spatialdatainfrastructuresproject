@@ -16,14 +16,44 @@
   <body>
     <header>
         APG3039B Spatial Data Infrastructures Project
+        
     </header>
     <main>
-        <iframe src="web_map_assets/index.html" frameborder="0" id="map-embed"></iframe>
+      <aside>
+        <address>
+          <img src="logos/coct.png" alt="City of Cape Town Logo"/>
+          <h1>Municipal Valuations</h1>
+          <h2>the University of Cape Town</h2>
+        </address>
+        <p>The <a onclick="changeToGVR()">General Valuation Roll (GVR)</a> is a document containing the municipal valuations of all the registered properties within the boundaries of the City of Cape Town and is used to calculate the rates that property owners are required to pay. You are able to object to your property valuation during the objection period.</p>
+        <h3>Submissions</h3>
+        <ul id="submission_button_set">
+          <li><button onclick="changeToForm('revenue')">Revenue Data</button></li>
+          <li><button onclick="changeToForm('objections')">Objections</button></li>
+          <li><button onclick="changeToForm('sales')">Sales Submissions</button></li>
+          <li><button onclick="changeToForm('renovations')"> Renovation Data</button></li>
+          <li><button >Other Queries</button></li>
+        </ul>
+        <button  onclick="changeToMap()">Back To Map</button>
+        <button  onclick="changeToDownloads()">Downloads</button>
+      </aside>
+      <map>
+        <div id="content_heading">Valuation Map</div>
+        <iframe src="web_map_assets/index.html" frameborder="0" id="map_embed" class="" >
+        </iframe>
+        <iframe id="objections_form" class="form invisible" src="https://docs.google.com/forms/d/e/1FAIpQLSdoRZKVuL7TgrbANxSFTdoxuJxP02K3VyeruvOGURYdzIKosA/viewform?embedded=true" >Loading…</iframe>
+        <iframe id="renovations_form" class="form invisible" src="https://docs.google.com/forms/d/e/1FAIpQLSdtOFyB0qwP6jR0lRA8EKX9hAfYD4tjGpUXnniCwulcqKgBvQ/viewform?embedded=true">Loading…</iframe>
+        <iframe id="sales_form" class="form invisible" src="https://docs.google.com/forms/d/e/1FAIpQLSeKBVEevcX_9cJ5xPNMToDdTFqAYvGh0Rl4jzK3Ht3p4yS2LA/viewform?embedded=true" >Loading…</iframe>
+        <iframe id="gvr22" class="invisible" src="https://web1.capetown.gov.za/web1/gv2022/SearchProperty"> </iframe>
+        <iframe id="downloads"  class="invisible" src="https://drive.google.com/embeddedfolderview?id=1_PBRgJxAAptrhvEqC8Uz-yUzWYWEWUXW#grid" style="border:0;"></iframe>
+      </map>
+        
     </main>
     <footer>
         <address>
         By Thandi Matrose and Anees Omar
         <br/>Version 1.0</address>
     </footer>
+    <script src="inputHandler.js"></script>
   </body>
 </html>
