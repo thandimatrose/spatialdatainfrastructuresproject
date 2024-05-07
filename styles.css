@@ -1,7 +1,7 @@
 :root {
     --body-text-color : #1e2e21;
     --accent-color: #198811;
-    --body-font: 'Neue Haas Grotesk Text Pro';
+    --body-font: 'Neue Haas';
 }
 
 p {
@@ -135,3 +135,7 @@ main map iframe.invisible {
     display: none;
 }
 
+@font-face {
+ font-family: 'Neue Haas';
+ src: url(fonts/NeueHaas.TTF)
+}
