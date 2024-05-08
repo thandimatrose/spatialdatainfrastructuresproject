@@ -2,12 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="shortcut icon" type="image/png" href="logos/coct_small.png" />
     <link rel="icon" type="image/png" href="public/icons/Avatar Round.png" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
       integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-      crossorigin="anonymous" />
+      crossorigin="anonymous"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SDI Project</title>
     <link rel="stylesheet" href="styles.css" />
@@ -15,44 +17,170 @@
   </head>
   <body>
     <header>
-        APG3039B Spatial Data Infrastructures Project
-        
+      APG3039B Spatial Data Infrastructures Project
+      <nav>
+        <ul id="nav-items">
+          <li class="nav-link" onclick="moveTo('geoportal')">
+            <a>GeoPortal</a>
+          </li>
+          <li class="nav-link" onclick="moveTo('about')"><a>About Us</a></li>
+          <li class="nav-link" onclick="moveTo('submissions')"><a>Submissions</a></li>
+          <li class="nav-link"><a>Feedback</a></li>
+          <li class="nav-link"><a>Contact Us</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-      <aside>
-        <address>
-          <img src="logos/coct.png" alt="City of Cape Town Logo"/>
-          <h1>Municipal Valuations</h1>
+      <section id="home">
+        
+          
+          <!-- First container -->
+  <div class="container container_solid">
+    <div class="title_wrapper">
+      <img src="logos/coct.png" alt="City of Cape Town Logo" />
+      <h1>Municipal Valuations</h1>
+      <address>  
+          <h2>the University of Cape Town</h2>
+        
+        <p>
+          The <a onclick="changeToGVR()">General Valuation Roll (GVR)</a> is a
+          document containing the municipal valuations of all the registered
+          properties within the boundaries of the City of Cape Town and is used
+          to calculate the rates that property owners are required to pay. You
+          are able to object to your property valuation during the objection
+          period.
+        </p>
+        </address>
+    </div>
+  </div>
+
+  <!-- Second container -->
+  <div class="container container_image" aria-hidden="true">
+    <div class="title_wrapper">
+      <img src="logos/coct.png" alt="City of Cape Town Logo" />
+      <h1>Municipal Valuations</h1>
+      <address>  
           <h2>the University of Cape Town</h2>
         </address>
-        <p>The <a onclick="changeToGVR()">General Valuation Roll (GVR)</a> is a document containing the municipal valuations of all the registered properties within the boundaries of the City of Cape Town and is used to calculate the rates that property owners are required to pay. You are able to object to your property valuation during the objection period.</p>
+        <p>
+          The <a onclick="changeToGVR()">General Valuation Roll (GVR)</a> is a
+          document containing the municipal valuations of all the registered
+          properties within the boundaries of the City of Cape Town and is used
+          to calculate the rates that property owners are required to pay. You
+          are able to object to your property valuation during the objection
+          period.
+        </p>
+    </div>
+  </div>
+
+</header>
+
+<section>
+  <h2>Lorem ipsum dolor sit amet.</h2>
+  <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>
+    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+  </p>
+</section>
+        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quod laudantium nisi qui eos aliquam fugit, quaerat velit veritatis voluptas eaque excepturi temporibus id, libero illum error ea consectetur est optio ex. Quam ad delectus asperiores rerum, alias maiores soluta obcaecati. Facilis eaque provident quaerat cupiditate possimus? Ad explicabo corporis exercitationem temporibus dolorum totam sit! Incidunt tempore minima enim veniam.</p>
+
+        <button onclick="changeToMap()">Back To Map</button>
+        <button onclick="changeToDownloads()">Downloads</button>
+      </section>
+      <section id="geoportal">
+        <aside>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia in
+          exercitationem atque sunt reprehenderit. Ullam quis aliquid adipisci
+          deserunt voluptatibus facere eos quo! Cum, ratione excepturi officia
+          praesentium voluptatem dolorum itaque assumenda, explicabo fuga modi
+          voluptatum animi labore corporis libero, consequatur vel! Tenetur,
+          aliquid ab. Enim sequi veritatis commodi voluptates!
+        </aside>
+        <map>
+          <iframe
+            src="web_map_assets/index.html"
+            frameborder="0"
+            id="map_embed"
+            class=""
+          >
+          </iframe>
+        </map>
+      </section>
+      <section id="submissions">
+        <map>
+          <iframe
+            id="objections_form"
+            class="form invisible"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdoRZKVuL7TgrbANxSFTdoxuJxP02K3VyeruvOGURYdzIKosA/viewform?embedded=true"
+            >Loading…</iframe
+          >
+          <iframe
+            id="renovations_form"
+            class="form invisible"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdtOFyB0qwP6jR0lRA8EKX9hAfYD4tjGpUXnniCwulcqKgBvQ/viewform?embedded=true"
+            >Loading…</iframe
+          >
+          <iframe
+            id="sales_form"
+            class="form"
+            src="https://docs.google.com/forms/d/e/1FAIpQLScvB5WbWNVOP7bt_SMDUdxEz6g5nUY8js90VjJsKL3lY0yatg/viewform?embedded=true"
+            >Loading…</iframe
+          >
+          
+          <iframe
+            id="downloads"
+            class="invisible"
+            src="https://drive.google.com/embeddedfolderview?id=1_PBRgJxAAptrhvEqC8Uz-yUzWYWEWUXW#grid"
+            style="border: 0"
+          ></iframe>
+        </map>
+        <aSide>
         <h3>Submissions</h3>
         <ul id="submission_button_set">
-          <li><button onclick="changeToForm('revenue')">Revenue Data</button></li>
-          <li><button onclick="changeToForm('objections')">Objections</button></li>
-          <li><button onclick="changeToForm('sales')">Sales Submissions</button></li>
-          <li><button onclick="changeToForm('renovations')"> Renovation Data</button></li>
-          <li><button >Other Queries</button></li>
+          <li>
+            <button onclick="changeToForm('revenue')">Revenue Data</button>
+          </li>
+          <li>
+            <button onclick="changeToForm('objections')">Objections</button>
+          </li>
+          <li>
+            <button onclick="changeToForm('sales')">Sales Submissions</button>
+          </li>
+          <li>
+            <button onclick="changeToForm('renovations')">
+              Renovation Data
+            </button>
+          </li>
+          <li><button>Other Queries</button></li>
         </ul>
-        <button  onclick="changeToMap()">Back To Map</button>
-        <button  onclick="changeToDownloads()">Downloads</button>
-      </aside>
-      <map>
-        
-        <iframe src="web_map_assets/index.html" frameborder="0" id="map_embed" class="" >
-        </iframe>
-        <iframe id="objections_form" class="form invisible" src="https://docs.google.com/forms/d/e/1FAIpQLSdoRZKVuL7TgrbANxSFTdoxuJxP02K3VyeruvOGURYdzIKosA/viewform?embedded=true" >Loading…</iframe>
-        <iframe id="renovations_form" class="form invisible" src="https://docs.google.com/forms/d/e/1FAIpQLSdtOFyB0qwP6jR0lRA8EKX9hAfYD4tjGpUXnniCwulcqKgBvQ/viewform?embedded=true">Loading…</iframe>
-        <iframe id="sales_form" class="form invisible" src="https://docs.google.com/forms/d/e/1FAIpQLScvB5WbWNVOP7bt_SMDUdxEz6g5nUY8js90VjJsKL3lY0yatg/viewform?embedded=true" >Loading…</iframe>
-        <iframe id="gvr22" class="invisible" src="https://web1.capetown.gov.za/web1/gv2022/SearchProperty"> </iframe>
-        <iframe id="downloads"  class="invisible" src="https://drive.google.com/embeddedfolderview?id=1_PBRgJxAAptrhvEqC8Uz-yUzWYWEWUXW#grid" style="border:0;"></iframe>
-      </map>
-        
-     </main>
+        </aSide>
+      </section>
+      <section id="gvr22">
+        <iframe
+            id="gvr22_FRAM"
+            class="invisible"
+            src="https://web1.capetown.gov.za/web1/gv2022/SearchProperty"
+          ></iframe>
+      </section>
+      <section id="feedback"></section>
+    </main>
     <footer>
-        <address>
+      <address>
+        <div class="socialbtns">
+          <ul>
+            <li><a href="#" class="fa fa-lg fa-facebook"></a></li>
+            <li><a href="#" class="fa fa-lg fa-twitter"></a></li>
+            <li><a href="#" class="fa fa-lg fa-github"></a></li>
+            <li><a href="#" class="fa fa-lg fa-linkedin"></a></li>
+            <li><a href="#" class="fa fa-lg fa-instagram"></a></li>
+            <li><a href="#" class="fa fa-lg fa-youtube"></a></li>
+          </ul>
+        </div>
+
         By Thandi Matrose and Anees Omar
-        <br/>Version 1.0</address>
+        <br />Version 1.0 City of Cape Town
+      </address>
     </footer>
     <script src="inputHandler.js"></script>
   </body>
