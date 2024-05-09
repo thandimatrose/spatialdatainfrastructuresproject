@@ -23,6 +23,9 @@ h2, h1 {
         margin: 0;
         text-align: center;
 }
+h1 {
+    
+}
 h2 {
     font-size: 15px;
 }
@@ -58,9 +61,10 @@ body {
     color: var(--section -color);
     font-family: var(--body-font);
     font-weight: 200;
+    overflow-x: hidden;
 }
 
-header {
+nav {
     
     align-items: center;
     padding: 3px;
@@ -70,18 +74,32 @@ header {
     z-index: 4;
     width: 100%;
     color: #000;
-
+    overflow-x: hidden;
+    overflow-y: hidden;
+    align-content: center;
+    align-content: center;
 }
-
-header nav {
-    width: 100%;
+nav ul#nav-items{
     
-} 
+    align-content: center;
+    align-content: center;
 
-header nav ul{
     display:  grid;
     grid-template-columns: auto auto auto auto auto;
+    color: var(--basic-dark-color);
 }
+nav ul#nav-items li {
+    padding: 0px 40px;
+}
+nav ul#nav-items li a{
+    color: var(--basic-dark-color);
+}
+nav ul#nav-items li a:hover{
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
 main {
     
 }
@@ -93,8 +111,7 @@ main section {
 }
 section#geoportal {
     /*!!!!!!*/
-     margin-top: 100vh;
-     padding-top: 100px;
+    padding-top: 100px;
     display: grid;
     grid-template-columns: 20% 80%;
 }
@@ -139,6 +156,10 @@ section#title {
     
 }
 
+section#aboutus {
+    column-count: 2;
+}
+
 section#submissions {
     display: grid;
     grid-template-columns: 65% 35%;
@@ -149,7 +170,13 @@ section#submissions {
 
 section#submissions iframe {
     width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
     
+}
+section#submissions aside {
+    padding-left: 10px;
+    width: fit-content;
 }
 
 section#submissions ul#submission_button_set {
@@ -168,7 +195,28 @@ section#submissions ul#submission_button_set button{
 }
 section#submissions ul#submission_button_set button:hover{
     border: black 1px solid;
+   
 
+}
+
+section#submissions iframe#submission-form {
+    height: 900px;
+    overflow: scroll;
+} 
+
+section#submissions iframe#submission-form.closed {
+    height: 500px;
+    overflow-x: hidden;
+}
+
+
+section#documents {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+section#documents iframe {
+    width: 100%;
+    height: 400px;
 }
 
 section#gvr22 iframe {
@@ -215,6 +263,9 @@ footer address {
     padding-left: 10px;
     width: 100%;
     text-align: center;
+}
+footer address span {
+    background-color: white;
 }
 
 section  map iframe.invisible {
@@ -267,98 +318,39 @@ section  map iframe.invisible {
 
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@900&display=swap');
 
-section#home header {
-  height: 200vh;
+section#home  {
+    height: 100vh;
+    padding-top: 100px;
+    align-items: start;
+    align-content: start;
+    
+
+}
+section#home img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
 }
 
-section#home .container {
-  /* hide fixed overflow contents */
-  clip: rect(0, auto, auto, 0);
 
-  /* does not work if overflow = visible */
-  overflow: hidden;
-
-  /* only works with absolute positioning */
-  position: absolute;
-
-  /* Make sure containers are full-width and height */
-  height: 100vh;
-  left: 0;
-  width: 100%;
-  
-  
-  /* safari hack */
-  -webkit-mask-image: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 100%);
-}
-
-.container_solid {
-  background: white;
-  
-  /* position this container at the top of its parent element */
-  top: 0;
-}
-
-.container_solid address {
-    color: white;
-}
-.title_wrapper {
-  position: fixed;
-  display: block;  
-  margin: auto;
-  width: 100%;
-  /* center the text wrapper vertically */
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-.title_wrapper h1 {
-  text-align: center;
-  font-size: 64px;
-  text-transform: uppercase;
-  text-align: center;
-  font-family: var(--body-font);
-  font-weight: 900;
-}
-
-.container_solid .title_wrapper h1 {
-  /* the text background */
-  background: url(images/coct1.jpg);
-  background-size: 100vw auto;
-  background-position: center;
-  
-  
-  /* clip the text is possible */
-  text-fill-color: transparent;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  
-  /* fallback text color */
-  color: black;
-}
-
-.container_image {
-  /* Grab a free image from unsplash */
-  background-image: url(images/coct1.jpg);
-  background-size:100vw auto;
-  background-position: center;
-  background-attachment: fixed;
-  
-  /* position the second container below the first container */
-  top: 100vh;
-}
-
-.container_image .title_wrapper h1 {
-  color: white;
-}
 
 section#home section {
-  min-height: 100vh;
+  height: fit-content;
   padding: 2em;
   margin: auto;
   max-width: 800px;
+  
+}
+
+section#home div.title_wrapper {
+    padding: 50px 150px;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 section#home section h2 {

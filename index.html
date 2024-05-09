@@ -8,85 +8,51 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
       integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SDI Project</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="scripts.js"></script>
   </head>
   <body>
-    <header>
-      APG3039B Spatial Data Infrastructures Project
+      
       <nav>
         <ul id="nav-items">
           <li class="nav-link" onclick="moveTo('geoportal')">
             <a>GeoPortal</a>
           </li>
-          <li class="nav-link" onclick="moveTo('about')"><a>About Us</a></li>
-          <li class="nav-link" onclick="moveTo('submissions')"><a>Submissions</a></li>
-          <li class="nav-link"><a>Feedback</a></li>
-          <li class="nav-link"><a>Contact Us</a></li>
+          <li class="nav-link" onclick="moveTo('aboutus')"><a>About Us</a></li>
+          <li class="nav-link" onclick="moveTo('submissions')">
+            <a>Submissions</a>
+          </li>
+          <li class="nav-link" onclick="moveTo('feedback')"><a>Feedback</a></li>
+          <li class="nav-link" onclick="moveTo('contactus')">
+            <a>Contact Us</a>
+          </li>
         </ul>
       </nav>
-    </header>
     <main>
       <section id="home">
-        
-          
-          <!-- First container -->
-  <div class="container container_solid">
-    <div class="title_wrapper">
-      <img src="logos/coct.png" alt="City of Cape Town Logo" />
-      <h1>Municipal Valuations</h1>
-      <address>  
-          <h2>the University of Cape Town</h2>
-        
-        <p>
-          The <a onclick="changeToGVR()">General Valuation Roll (GVR)</a> is a
-          document containing the municipal valuations of all the registered
-          properties within the boundaries of the City of Cape Town and is used
-          to calculate the rates that property owners are required to pay. You
-          are able to object to your property valuation during the objection
-          period.
-        </p>
-        </address>
-    </div>
-  </div>
-
-  <!-- Second container -->
-  <div class="container container_image" aria-hidden="true">
-    <div class="title_wrapper">
-      <img src="logos/coct.png" alt="City of Cape Town Logo" />
-      <h1>Municipal Valuations</h1>
-      <address>  
-          <h2>the University of Cape Town</h2>
-        </address>
-        <p>
-          The <a onclick="changeToGVR()">General Valuation Roll (GVR)</a> is a
-          document containing the municipal valuations of all the registered
-          properties within the boundaries of the City of Cape Town and is used
-          to calculate the rates that property owners are required to pay. You
-          are able to object to your property valuation during the objection
-          period.
-        </p>
-    </div>
-  </div>
-
-</header>
-
-<section>
-  <h2>Lorem ipsum dolor sit amet.</h2>
-  <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <p>
-    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-  </p>
-</section>
-        
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quod laudantium nisi qui eos aliquam fugit, quaerat velit veritatis voluptas eaque excepturi temporibus id, libero illum error ea consectetur est optio ex. Quam ad delectus asperiores rerum, alias maiores soluta obcaecati. Facilis eaque provident quaerat cupiditate possimus? Ad explicabo corporis exercitationem temporibus dolorum totam sit! Incidunt tempore minima enim veniam.</p>
-
+          <div class="title_wrapper">
+            <img src="logos/coct.png" alt="City of Cape Town Logo" />
+            <h1>Property Valuations Portal</h1>
+            <address>
+              <h2>your home in City of Cape Town</h2>
+            </address>
+            <p>
+              The <a onclick="changeToGVR()">General Valuation Roll (GVR)</a> is
+              a document containing the municipal valuations of all the
+              registered properties within the boundaries of the City of Cape
+              Town and is used to calculate the rates that property owners are
+              required to pay. You are able to object to your property valuation
+              during the objection period.
+            </p>
+            
         <button onclick="changeToMap()">Back To Map</button>
         <button onclick="changeToDownloads()">Downloads</button>
+          
+        </div>
+
       </section>
       <section id="geoportal">
         <aside>
@@ -102,84 +68,125 @@
             src="web_map_assets/index.html"
             frameborder="0"
             id="map_embed"
-            class=""
-          >
+            class="">
           </iframe>
         </map>
+      </section>
+      <section id="aboutus">
+        <h3>About Us</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum et
+          tempore veritatis, illo sit tempora non accusamus minima fugiat totam
+          culpa blanditiis perferendis, commodi impedit explicabo voluptate,
+          quaerat saepe autem. Dolores expedita possimus corporis exercitationem
+          sint esse itaque eligendi aliquam ratione accusamus maxime voluptas
+          ab, vero nisi quo. Cupiditate, id.
+        </p>
+        <h4>Servitudes</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore incidunt possimus dolores vero quasi repudiandae id, magni velit alias est?</p>
+      </section>
+      <section id="documents">
+       
+        <aside>
+          <h3>Documents and Archive</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore
+            asperiores maiores sit nobis quis quo fugiat alias ipsum totam
+            magnam iste minima perferendis facilis facere numquam suscipit
+            fugit, a hic saepe eaque. 
+          </p>
+          <ul>
+
+          </ul>
+        </aside>
+         <iframe
+          id="downloads"
+          class="invisible"
+          src="https://drive.google.com/embeddedfolderview?id=1_PBRgJxAAptrhvEqC8Uz-yUzWYWEWUXW#grid"
+          style="border: 0"></iframe>
+      </section>
+      <section id="gvr22">
+        <h3>General Valuation Roll 2022</h3>
+        <iframe
+          id="gvr22_FRAM"
+          class="invisible"
+          src="https://web1.capetown.gov.za/web1/gv2022/SearchProperty"></iframe>
       </section>
       <section id="submissions">
         <map>
           <iframe
-            id="objections_form"
-            class="form invisible"
+            id="submission-form"
+            class="form closed"
             src="https://docs.google.com/forms/d/e/1FAIpQLSdoRZKVuL7TgrbANxSFTdoxuJxP02K3VyeruvOGURYdzIKosA/viewform?embedded=true"
-            >Loading…</iframe
+            style="overflow: hidden;">Loading…</iframe
           >
-          <iframe
-            id="renovations_form"
-            class="form invisible"
-            src="https://docs.google.com/forms/d/e/1FAIpQLSdtOFyB0qwP6jR0lRA8EKX9hAfYD4tjGpUXnniCwulcqKgBvQ/viewform?embedded=true"
-            >Loading…</iframe
-          >
-          <iframe
-            id="sales_form"
-            class="form"
-            src="https://docs.google.com/forms/d/e/1FAIpQLScvB5WbWNVOP7bt_SMDUdxEz6g5nUY8js90VjJsKL3lY0yatg/viewform?embedded=true"
-            >Loading…</iframe
-          >
-          
-          <iframe
-            id="downloads"
-            class="invisible"
-            src="https://drive.google.com/embeddedfolderview?id=1_PBRgJxAAptrhvEqC8Uz-yUzWYWEWUXW#grid"
-            style="border: 0"
-          ></iframe>
         </map>
-        <aSide>
-        <h3>Submissions</h3>
-        <ul id="submission_button_set">
-          <li>
-            <button onclick="changeToForm('revenue')">Revenue Data</button>
-          </li>
-          <li>
-            <button onclick="changeToForm('objections')">Objections</button>
-          </li>
-          <li>
-            <button onclick="changeToForm('sales')">Sales Submissions</button>
-          </li>
-          <li>
-            <button onclick="changeToForm('renovations')">
-              Renovation Data
-            </button>
-          </li>
-          <li><button>Other Queries</button></li>
-        </ul>
-        </aSide>
+        <aside>
+          <h3>Submissions</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe odio
+            asperiores, labore vero consectetur iure optio eaque illo ab
+            obcaecati, dolor quibusdam reprehenderit, id voluptatibus. Assumenda
+            repellendus distinctio hic impedit.
+          </p>
+          <ul id="submission_button_set">
+            <li>
+              <button onclick="changeToForm('revenue')">Revenue Data</button>
+            </li>
+            <li>
+              <button onclick="changeToForm('objections')">Objections</button>
+            </li>
+            <li>
+              <button onclick="changeToForm('sales')">Sales Submissions</button>
+            </li>
+            <li>
+              <button onclick="changeToForm('renovations')">
+                Renovation Data
+              </button>
+            </li>
+            <li><button>Other Queries</button></li>
+          </ul>
+        </aside>
       </section>
-      <section id="gvr22">
-        <iframe
-            id="gvr22_FRAM"
-            class="invisible"
-            src="https://web1.capetown.gov.za/web1/gv2022/SearchProperty"
-          ></iframe>
+      
+      <section id="feedback">
+        <h3>Feedback</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure aliquam
+          dolore pariatur perspiciatis quasi sapiente dolor explicabo ratione
+          voluptate, repellat quod tempora laborum fuga corrupti consectetur
+          nulla doloribus tempore obcaecati.
+        </p>
       </section>
-      <section id="feedback"></section>
     </main>
-    <footer>
+    <footer id="contactus">
       <address>
         <div class="socialbtns">
           <ul>
-            <li><a href="#" class="fa fa-lg fa-facebook"></a></li>
-            <li><a href="#" class="fa fa-lg fa-twitter"></a></li>
-            <li><a href="#" class="fa fa-lg fa-github"></a></li>
-            <li><a href="#" class="fa fa-lg fa-linkedin"></a></li>
-            <li><a href="#" class="fa fa-lg fa-instagram"></a></li>
-            <li><a href="#" class="fa fa-lg fa-youtube"></a></li>
+            <li>
+              <a
+                href="https://www.facebook.com/CityofCT/"
+                class="fa fa-lg fa-facebook"></a>
+            </li>
+            <li>
+              <a
+                href="https://twitter.com/CityofCT"
+                class="fa fa-lg fa-twitter"></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/company/city-of-cape-town"
+                class="fa fa-lg fa-linkedin"></a>
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/user/cctecomm"
+                class="fa fa-lg fa-youtube"></a>
+            </li>
           </ul>
         </div>
 
-        By Thandi Matrose and Anees Omar
-        <br />Version 1.0 City of Cape Town
+        <span>Built by Thandi Matrose & Anees Omar<br/>Version 1.0<br/>City of Cape Town</span>
       </address>
     </footer>
     <script src="inputHandler.js"></script>
