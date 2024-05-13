@@ -15,44 +15,41 @@
     <script src="scripts.js"></script>
   </head>
   <body>
-      
-      <nav>
-        <ul id="nav-items">
-          <li class="nav-link" onclick="moveTo('geoportal')">
-            <a>GeoPortal</a>
-          </li>
-          <li class="nav-link" onclick="moveTo('aboutus')"><a>About Us</a></li>
-          <li class="nav-link" onclick="moveTo('submissions')">
-            <a>Submissions</a>
-          </li>
-          <li class="nav-link" onclick="moveTo('feedback')"><a>Feedback</a></li>
-          <li class="nav-link" onclick="moveTo('contactus')">
-            <a>Contact Us</a>
-          </li>
-        </ul>
-      </nav>
+    <nav>
+      <ul id="nav-items">
+        <li class="nav-link" onclick="moveTo('geoportal')">
+          <a>GeoPortal</a>
+        </li>
+        <li class="nav-link" onclick="moveTo('aboutus')"><a>About Us</a></li>
+        <li class="nav-link" onclick="moveTo('submissions')">
+          <a>Submissions</a>
+        </li>
+        <li class="nav-link" onclick="moveTo('feedback')"><a>Feedback</a></li>
+        <li class="nav-link" onclick="moveTo('contactus')">
+          <a>Contact Us</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <section id="home">
-          <div class="title_wrapper">
-            <img src="logos/coct.png" alt="City of Cape Town Logo" />
-            <h1>Property Valuations Portal</h1>
-            <address>
-              <h2>your home in City of Cape Town</h2>
-            </address>
-            <p>
-              The <a onclick="changeToGVR()">General Valuation Roll (GVR)</a> is
-              a document containing the municipal valuations of all the
-              registered properties within the boundaries of the City of Cape
-              Town and is used to calculate the rates that property owners are
-              required to pay. You are able to object to your property valuation
-              during the objection period.
-            </p>
-            
-        <button onclick="changeToMap()">Back To Map</button>
-        <button onclick="changeToDownloads()">Downloads</button>
-          
-        </div>
+        <div class="title_wrapper">
+          <img src="logos/coct.png" alt="City of Cape Town Logo" />
+          <h1>Property Valuations Portal</h1>
+          <address>
+            <h2>your home in City of Cape Town</h2>
+          </address>
+          <p>
+            The <a onclick="changeToGVR()">General Valuation Roll (GVR)</a> is a
+            document containing the municipal valuations of all the registered
+            properties within the boundaries of the City of Cape Town and is
+            used to calculate the rates that property owners are required to
+            pay. You are able to object to your property valuation during the
+            objection period.
+          </p>
 
+          <button onclick="changeToMap()">Back To Map</button>
+          <button onclick="changeToDownloads()">Downloads</button>
+        </div>
       </section>
       <section id="geoportal">
         <aside>
@@ -83,27 +80,39 @@
           ab, vero nisi quo. Cupiditate, id.
         </p>
         <h4>Servitudes</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore incidunt possimus dolores vero quasi repudiandae id, magni velit alias est?</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+          incidunt possimus dolores vero quasi repudiandae id, magni velit alias
+          est?
+        </p>
       </section>
       <section id="documents">
-       
-        <aside>
-          <h3>Documents and Archive</h3>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore
-            asperiores maiores sit nobis quis quo fugiat alias ipsum totam
-            magnam iste minima perferendis facilis facere numquam suscipit
-            fugit, a hic saepe eaque. 
-          </p>
-          <ul>
+        <div id="document-container">
+          <aside>
 
-          </ul>
-        </aside>
-         <iframe
-          id="downloads"
-          class="invisible"
-          src="https://drive.google.com/embeddedfolderview?id=1_PBRgJxAAptrhvEqC8Uz-yUzWYWEWUXW#grid"
-          style="border: 0"></iframe>
+            <h3>Documents and Archive</h3>
+            <p>
+              Information to download
+            </p>
+            <div id="document-menu">
+              <p class="path">><a>Documents Menu</a>/<a>Property Rates</a></p>
+              <ul>
+                <li><a href="">Property Rates</a><p class="extra-info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla doloremque odio tenetur nostrum dolor amet fugiat magnam quasi accusamus dolore?</p></li>
+                <li><a href="">Property Rates</a><p class="extra-info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla doloremque odio tenetur nostrum dolor amet fugiat magnam quasi accusamus dolore?</p></li>
+                <li><a href="">City of Valuers and Data Collectors</a><p class="extra-info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla doloremque odio tenetur nostrum dolor amet fugiat magnam quasi accusamus dolore?</p></li>
+              
+              </ul>
+            </div>
+            <p>Al information is property of the City of Cape Town</p>
+
+            <ul></ul>
+          </aside>
+          <iframe
+            id="downloads"
+            class="invisible"
+            src="https://drive.google.com/embeddedfolderview?id=1_PBRgJxAAptrhvEqC8Uz-yUzWYWEWUXW#grid"
+            style="border: 0"></iframe>
+        </div>
       </section>
       <section id="gvr22">
         <h3>General Valuation Roll 2022</h3>
@@ -111,6 +120,36 @@
           id="gvr22_FRAM"
           class="invisible"
           src="https://web1.capetown.gov.za/web1/gv2022/SearchProperty"></iframe>
+        <h4>Supplementary Valuation Roll (SVR)</h4>
+        <p>
+          The City must certify and publish at least one SVR per year. The SVR
+          contains details of properties that were not included in the last GV
+          Roll, as well as any properties that have been changed. According to
+          the amended Local Government Municipal Property Rates Act(Act 6 of
+          2004) , a property is determined to have changed, if it has: been
+          identified as having been previously incorrectly valued; been
+          incorrectly recorded in the last GVR because of a clerical or typing
+          error; been omitted from the valuation roll; been recently added to
+          the municipality; been subdivided or consolidated; changed in category
+          had a building plan signed off; had a significant increase or decrease
+          in market value since the last GVR; If your property is included in an
+          SVR, the City will post two notices to you.
+        </p>
+        <p>
+          Notice 1 will be posted immediately after the SV valuation is
+          completed, and will inform you of your right to request a review. You
+          will need to email
+          <a href="mailto:valuationsobjection@capetown.gov.za"
+            >valuationsobjection@capetown.gov.za</a
+          >
+          to obtain the official review form and return the completed form to
+          the same address. <br />Notice 2 will be posted to you after the SV
+          Roll is certified. This notice will inform you of your right to
+          object, and outline the process for submitting an objection. You can
+          obtain an official form by emailing
+          valuationsobjection@capetown.gov.za and must return the completed form
+          to the same address.
+        </p>
       </section>
       <section id="submissions">
         <map>
@@ -118,7 +157,8 @@
             id="submission-form"
             class="form closed"
             src="https://docs.google.com/forms/d/e/1FAIpQLSdoRZKVuL7TgrbANxSFTdoxuJxP02K3VyeruvOGURYdzIKosA/viewform?embedded=true"
-            style="overflow: hidden;">Loading…</iframe
+            style="overflow: hidden"
+            >Loading…</iframe
           >
         </map>
         <aside>
@@ -148,7 +188,7 @@
           </ul>
         </aside>
       </section>
-      
+
       <section id="feedback">
         <h3>Feedback</h3>
         <p>
@@ -161,33 +201,52 @@
     </main>
     <footer id="contactus">
       <address>
-        <div class="socialbtns">
-          <ul>
-            <li>
-              <a
-                href="https://www.facebook.com/CityofCT/"
-                class="fa fa-lg fa-facebook"></a>
-            </li>
-            <li>
-              <a
-                href="https://twitter.com/CityofCT"
-                class="fa fa-lg fa-twitter"></a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/company/city-of-cape-town"
-                class="fa fa-lg fa-linkedin"></a>
-            </li>
-            <li>
-              <a
-                href="https://www.youtube.com/user/cctecomm"
-                class="fa fa-lg fa-youtube"></a>
-            </li>
-          </ul>
+        <div>
+          <div class="socialbtns">
+            <ul>
+              <li>
+                <a
+                  href="https://www.facebook.com/CityofCT/"
+                  class="fa fa-lg fa-facebook"></a>
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com/CityofCT"
+                  class="fa fa-lg fa-twitter"></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/city-of-cape-town"
+                  class="fa fa-lg fa-linkedin"></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/user/cctecomm"
+                  class="fa fa-lg fa-youtube"></a>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <span>Built by Thandi Matrose & Anees Omar<br/>Version 1.0<br/>City of Cape Town</span>
+        <div class="irl-contact">
+          For more information, please contact us:<br />
+
+          Telephone:<br />
+          <a href="tel:+27860103089">086 010 3089</a>
+<br/>
+          Email:
+          <br />
+          <a href="mailto:valuations@capetown.gov.za"
+            >valuations@capetown.gov.za</a
+          >
+        </div>
       </address>
+      <div id="credits">
+        <span
+          >Built by Thandi Matrose & Anees Omar</span><br /><span>Version 1.0</span><br /><span>City of
+          Cape Town</span
+        >
+      </div>
     </footer>
     <script src="inputHandler.js"></script>
   </body>
