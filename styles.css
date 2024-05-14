@@ -218,8 +218,29 @@ section#title {
   justify-content: center;
 }
 
-section#aboutus {
+section#aboutus div.text-container {
   column-count: 2;
+}
+section#aboutus div#services {
+  display: grid;
+  grid-template-columns: calc(100%/3) calc(100%/3) calc(100%/3) ;
+
+}
+section#aboutus div#services div.service-card{
+  
+  padding: 10px;
+}
+section#aboutus div#services div.service-card h5 {
+  text-align: center;
+  margin: 0;
+  margin-top: 5px;
+  padding: 0;
+}
+
+section#aboutus div#services div.service-card p {
+  padding: 10px;
+  padding: 0 10px;
+  text-align: center;
 }
 
 section#submissions {
@@ -368,6 +389,11 @@ section#home div.title_wrapper {
   -webkit-backdrop-filter: blur(4px);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+button {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 section#home section h2 {

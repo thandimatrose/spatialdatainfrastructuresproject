@@ -39,31 +39,42 @@
             <h2>your home in City of Cape Town</h2>
           </address>
           <p>
-            The <a onclick="changeToGVR()">General Valuation Roll (GVR)</a> is a
-            document containing the municipal valuations of all the registered
-            properties within the boundaries of the City of Cape Town and is
-            used to calculate the rates that property owners are required to
-            pay. You are able to object to your property valuation during the
-            objection period.
+            Our department's vision is to be a world leader in the valuation of
+            property, with a reputation for delivering reliable appraisals in a
+            professional manner. Our mission is to deliver a high quality and
+            impartial valuation service to our customers to sustain a cost
+            effective, just and accurate valuation roll in the provision of fair
+            and equitable rates for the City. Our property valuations are
+            performed by competent and well-trained staff in accordance with the
+            prescriptions of the Local Government Municipal Property Rates Act
+            of 2004 and Council policies.
           </p>
+          
 
-          <button onclick="changeToMap()">Back To Map</button>
-          <button onclick="changeToDownloads()">Downloads</button>
+          <button onclick="openFullscreen()" class="fullscreen-button">Open Map</button>
         </div>
       </section>
       <section id="geoportal">
         <aside>
           <h3>GeoPortal</h3>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia in
-          exercitationem atque sunt reprehenderit. Enim sequi veritatis commodi voluptates!
+          The . Select which view of the area you'd like to see. <br />Click
+          "View "
           <ul>
-            <li><button onclick="displayMap('homeowner');">Homeowner</button></li>
-            <li><button onclick="displayMap('department');">Administrator</button></li>
-            <li><button onclick="displayMap('realestateprof');">Real Estate Professional</button></li>
-            <li><button onclick="displayMap('department');">Homeowner</button></li>
+            <li>
+              <button onclick="displayMap('homeowner');">Homeowner</button>
+            </li>
+            <li>
+              <button onclick="displayMap('department');">Administrator</button>
+            </li>
+            <li>
+              <button onclick="displayMap('realestate');">
+                Real Estate Professional
+              </button>
+            </li>
+            <li>
+              <button onclick="displayMap('department');">Homeowner</button>
+            </li>
           </ul>
-
-          
         </aside>
         <map id="map-container">
           <iframe
@@ -72,12 +83,28 @@
             id="map_embed"
             class="">
           </iframe>
-          <button id="fullscreen-open-button" onclick="openFullscreen()" class="fullscreen-button">Open Map</button>
-          <button id="fullscreen-close-button" onclick="closeFullscreen()" class="fullscreen-button">Close Map</button>
+          <button
+            id="fullscreen-open-button"
+            onclick="openFullscreen()"
+            class="fullscreen-button">
+            Open Map
+          </button>
+          <button
+            id="fullscreen-close-button"
+            onclick="closeFullscreen()"
+            class="fullscreen-button">
+            Close Map
+          </button>
         </map>
       </section>
       <section id="aboutus">
         <h3>About Us</h3>
+        <div class="text-container">
+        <blockquote cite="Louise Muller, Director of the Department of Valuations"
+          >v"Reliable property valuations provide the sustainable revenue stream
+          to be used for the benefit of the citizens of Cape Town." Louise
+          Muller Director: Valuations</blockquote
+        >
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum et
           tempore veritatis, illo sit tempora non accusamus minima fugiat totam
@@ -86,6 +113,45 @@
           sint esse itaque eligendi aliquam ratione accusamus maxime voluptas
           ab, vero nisi quo. Cupiditate, id.
         </p>
+        </div>
+        <h4>Our Services</h4>
+        <div id="services">
+          <div class="service-card">
+            <h5>Valuation operations</h5>
+            <p>
+              Includes the implementation of valuation methods and approaches
+              and standards to produce the General Valuation Roll
+            </p>
+          </div>
+          <div class="service-card">
+            <h5>Valuation surveys and quality</h5>
+            <p>
+              responsible for the data collection that supports the valuation
+              process
+            </p>
+          </div>
+          <div class="service-card">
+            <h5>Valuation data and business systems</h5>
+            <p>
+              responsible for providing data and systems support including
+              network and infrastructure, and computer assisted mass appraisal
+              modelling
+            </p>
+          </div>
+          <div class="service-card">
+            <img src="" alt="">
+            <h5>Valuation Business Environment</h5>
+            <p>responsible for customer care, objections and appeals</p>
+          </div>
+          <div class="service-card">
+            <h5>Business Integration and Valuation Regulation</h5>
+            <p>
+              Responsible for the Rates Policy, oversight of valuations related
+              legislative requirements, reporting, and guidance on business and
+              development strategies
+            </p>
+          </div>
+        </div>
         <h4>Servitudes</h4>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
@@ -96,18 +162,35 @@
       <section id="documents">
         <div id="document-container">
           <aside>
-
             <h3>Documents and Archive</h3>
-            <p>
-              Information to download
-            </p>
+            <p>Information to download</p>
             <div id="document-menu">
               <p class="path">><a>Documents Menu</a>/<a>Property Rates</a></p>
               <ul>
-                <li><a href="">Property Rates</a><p class="extra-info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla doloremque odio tenetur nostrum dolor amet fugiat magnam quasi accusamus dolore?</p></li>
-                <li><a href="">Property Rates</a><p class="extra-info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla doloremque odio tenetur nostrum dolor amet fugiat magnam quasi accusamus dolore?</p></li>
-                <li><a href="">City of Valuers and Data Collectors</a><p class="extra-info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla doloremque odio tenetur nostrum dolor amet fugiat magnam quasi accusamus dolore?</p></li>
-              
+                <li>
+                  <a href="">Property Rates</a>
+                  <p class="extra-info">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Nulla doloremque odio tenetur nostrum dolor amet fugiat
+                    magnam quasi accusamus dolore?
+                  </p>
+                </li>
+                <li>
+                  <a href="">Property Rates</a>
+                  <p class="extra-info">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Nulla doloremque odio tenetur nostrum dolor amet fugiat
+                    magnam quasi accusamus dolore?
+                  </p>
+                </li>
+                <li>
+                  <a href="">City of Valuers and Data Collectors</a>
+                  <p class="extra-info">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Nulla doloremque odio tenetur nostrum dolor amet fugiat
+                    magnam quasi accusamus dolore?
+                  </p>
+                </li>
               </ul>
             </div>
             <p>Al information is property of the City of Cape Town</p>
@@ -124,9 +207,17 @@
       <section id="gvr22">
         <h3>General Valuation Roll 2022</h3>
         <iframe
-          id="gvr22_FRAM"
+          id="gvr22-frame"
           class="invisible"
           src="https://web1.capetown.gov.za/web1/gv2022/SearchProperty"></iframe>
+          <p>
+            The <a onclick="changeToGVR()">General Valuation Roll (GVR)</a> is a
+            document containing the municipal valuations of all the registered
+            properties within the boundaries of the City of Cape Town and is
+            used to calculate the rates that property owners are required to
+            pay. You are able to object to your property valuation during the
+            objection period.
+          </p>
         <h4>Supplementary Valuation Roll (SVR)</h4>
         <p>
           The City must certify and publish at least one SVR per year. The SVR
@@ -240,7 +331,7 @@
 
           Telephone:<br />
           <a href="tel:+27860103089">086 010 3089</a>
-<br/>
+          <br />
           Email:
           <br />
           <a href="mailto:valuations@capetown.gov.za"
@@ -249,10 +340,9 @@
         </div>
       </address>
       <div id="credits">
-        <span
-          >Built by Thandi Matrose & Anees Omar</span><br /><span>Version 1.0</span><br /><span>City of
-          Cape Town</span
-        >
+        <span>Built by Thandi Matrose & Anees Omar</span><br /><span
+          >Version 1.0</span
+        ><br /><span>City of Cape Town</span>
       </div>
     </footer>
     <script src="inputHandler.js"></script>
