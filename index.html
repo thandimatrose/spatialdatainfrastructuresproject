@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="scripts.js"></script>
   </head>
-  <body>
+  <body id="body" class="">
     <nav>
       <ul id="nav-items">
         <li class="nav-link" onclick="moveTo('geoportal')">
@@ -53,20 +53,27 @@
       </section>
       <section id="geoportal">
         <aside>
+          <h3>GeoPortal</h3>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia in
-          exercitationem atque sunt reprehenderit. Ullam quis aliquid adipisci
-          deserunt voluptatibus facere eos quo! Cum, ratione excepturi officia
-          praesentium voluptatem dolorum itaque assumenda, explicabo fuga modi
-          voluptatum animi labore corporis libero, consequatur vel! Tenetur,
-          aliquid ab. Enim sequi veritatis commodi voluptates!
+          exercitationem atque sunt reprehenderit. Enim sequi veritatis commodi voluptates!
+          <ul>
+            <li><button onclick="displayMap('homeowner');">Homeowner</button></li>
+            <li><button onclick="displayMap('department');">Administrator</button></li>
+            <li><button onclick="displayMap('realestateprof');">Real Estate Professional</button></li>
+            <li><button onclick="displayMap('department');">Homeowner</button></li>
+          </ul>
+
+          
         </aside>
-        <map>
+        <map id="map-container">
           <iframe
-            src="web_map_assets/index.html"
+            src="map_homeowner/index.html"
             frameborder="0"
             id="map_embed"
             class="">
           </iframe>
+          <button id="fullscreen-open-button" onclick="openFullscreen()" class="fullscreen-button">Open Map</button>
+          <button id="fullscreen-close-button" onclick="closeFullscreen()" class="fullscreen-button">Close Map</button>
         </map>
       </section>
       <section id="aboutus">

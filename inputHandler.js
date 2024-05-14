@@ -11,6 +11,40 @@ function moveTo(destination) {
     element.scrollIntoView();
 }
 
+function displayMap(destination) {
+  document.getElementById("map_embed").src = "map_"+destination+"/index.html";
+}
+
+function openFullscreen() {
+  globalThis.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+
+  elem = document.getElementById("map-container");
+  elem.classList = "fullscreen";
+
+  document.getElementById("body").classList = "fullscreen";
+
+  render = document.getElementById("map_embed");
+  document.getElementById("map_embed").src = render.src; 
+
+}
+function closeFullscreen() {
+  
+
+  elem = document.getElementById("map-container");
+  elem.classList = "";
+
+  document.getElementById("body").classList = "";
+
+  render = document.getElementById("map_embed");
+  document.getElementById("map_embed").src = render.src;
+
+  
+
+  const element = document.getElementById("geoportal");
+  element.scrollIntoView();
+  
+}
+
 
 function changeToForm(target) {
     document.getElementById("submission-form").src = links[target];

@@ -22,9 +22,9 @@ public class SQLMaker {
             }
             reader.close();
             System.out.println(parcels.get(0));
-            replaceERFS("ComparativeSalesValuations.sql", parcels,0);
-            replaceERFS("IncomeCapitalisationValuations.sql", parcels,2000);
-            replaceERFS("ManualValuations.sql", parcels,7000);
+            replaceERFS("ComparativeSalesValuationsOLD.sql", parcels,0, "ComparativeSalesValuations.sql");
+            replaceERFS("IncomeCapitalisationValuationsOLD.sql", parcels,2000, "IncomeCapitalisationValuations.sql");
+            replaceERFS("ManualValuationsOLD.sql", parcels,7000, "ManualValuations.sql");
             
         } catch (Exception e) {
             System.out.println(e+"Error A");
@@ -32,7 +32,7 @@ public class SQLMaker {
         }
     }
 
-    public static void replaceERFS(String file, List<Integer> parcels, int start) {
+    public static void replaceERFS(String file, List<Integer> parcels, int start, String newfile) {
         try {
             BufferedReader reader = new BufferedReader(new FileReader(file));
             String line = reader.readLine();
@@ -40,15 +40,16 @@ public class SQLMaker {
             int count = start;
             while (line != null) {
                 
-                line = line.replaceAll("\'~\'", "" + parcels.get(count));
+                line = line.replaceAll("~", "" + parcels.get(count));
                 sql += line + "#";
 
                 count++;
                 line = reader.readLine();
             }
             reader.close();
-            FileWriter writer = new FileWriter("file"+start+".txt");
+            FileWriter writer = new FileWriter(newfile);
             String[] sqldetails = sql.split("#");
+            writer.write("");
             for (int i = 0; i < sqldetails.length; i++) {
                 writer.append(sqldetails[i]+"\n");
             }
