@@ -9,6 +9,10 @@
       href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
       integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
       crossorigin="anonymous" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SDI Project</title>
     <link rel="stylesheet" href="styles.css" />
@@ -49,32 +53,29 @@
             prescriptions of the Local Government Municipal Property Rates Act
             of 2004 and Council policies.
           </p>
-          
 
-          <button onclick="openFullscreen()" class="fullscreen-button">Open Map</button>
+          <button onclick="openFullscreen()" class="fullscreen-button">
+            Open Map
+          </button>
         </div>
       </section>
       <section id="geoportal">
-        <aside>
+        <aside class="slide">
           <h3>GeoPortal</h3>
-          The . Select which view of the area you'd like to see. <br />Click
-          "View "
-          <ul>
-            <li>
-              <button onclick="displayMap('homeowner');">Homeowner</button>
-            </li>
-            <li>
-              <button onclick="displayMap('department');">Administrator</button>
-            </li>
-            <li>
-              <button onclick="displayMap('realestate');">
-                Real Estate Professional
-              </button>
-            </li>
-            <li>
-              <button onclick="displayMap('department');">Homeowner</button>
-            </li>
-          </ul>
+          <div>
+            The City of Cape Town's Municipal Valuations Department is pleased
+            to offer the Land Valuation Geoportal, a user-friendly online tool
+            that allows you to explore property valuations across Cape Town.
+          </div>
+          <div>
+            <h5>What You Can Do:</h5>
+            - View Property Valuations: See the latest municipal valuations for
+            properties throughout Cape Town displayed on a user-friendly map.<br />
+            - Zoom and Pan: Easily navigate the map to explore valuations in
+            specific areas. <br />
+            Transparency and Information: Gain valuable insights into property
+            values within your neighborhood or anywhere in Cape Town.
+          </div>
         </aside>
         <map id="map-container">
           <iframe
@@ -95,61 +96,58 @@
             class="fullscreen-button">
             Close Map
           </button>
+          <img src="logos/compass.png" alt="North Arrow" />
         </map>
       </section>
       <section id="aboutus">
-        <h3>About Us</h3>
-        <div class="text-container">
-        <blockquote cite="Louise Muller, Director of the Department of Valuations"
-          >v"Reliable property valuations provide the sustainable revenue stream
-          to be used for the benefit of the citizens of Cape Town." Louise
-          Muller Director: Valuations</blockquote
-        >
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum et
-          tempore veritatis, illo sit tempora non accusamus minima fugiat totam
-          culpa blanditiis perferendis, commodi impedit explicabo voluptate,
-          quaerat saepe autem. Dolores expedita possimus corporis exercitationem
-          sint esse itaque eligendi aliquam ratione accusamus maxime voluptas
-          ab, vero nisi quo. Cupiditate, id.
-        </p>
+        <div>
+          <h3>About Us</h3>
+
+          <blockquote
+            cite="Louise Muller, Director of the Department of Valuations">
+            "Reliable property valuations provide the sustainable revenue stream
+            to be used for the benefit of the citizens of Cape Town."
+          </blockquote>
+          <br />Louise Muller <br />Director: Valuations
         </div>
-        <h4>Our Services</h4>
-        <div id="services">
-          <div class="service-card">
-            <h5>Valuation operations</h5>
-            <p>
-              Includes the implementation of valuation methods and approaches
-              and standards to produce the General Valuation Roll
-            </p>
-          </div>
-          <div class="service-card">
-            <h5>Valuation surveys and quality</h5>
-            <p>
-              responsible for the data collection that supports the valuation
-              process
-            </p>
-          </div>
-          <div class="service-card">
-            <h5>Valuation data and business systems</h5>
-            <p>
-              responsible for providing data and systems support including
-              network and infrastructure, and computer assisted mass appraisal
-              modelling
-            </p>
-          </div>
-          <div class="service-card">
-            <img src="" alt="">
-            <h5>Valuation Business Environment</h5>
-            <p>responsible for customer care, objections and appeals</p>
-          </div>
-          <div class="service-card">
-            <h5>Business Integration and Valuation Regulation</h5>
-            <p>
-              Responsible for the Rates Policy, oversight of valuations related
-              legislative requirements, reporting, and guidance on business and
-              development strategies
-            </p>
+        <div>
+          <h4>Our Services</h4>
+          <div id="services">
+            <div class="service-card">
+              <h5>Valuation operations</h5>
+              <p>
+                Includes the implementation of valuation methods and approaches
+                and standards to produce the General Valuation Roll
+              </p>
+            </div>
+            <div class="service-card">
+              <h5>Valuation surveys and quality</h5>
+              <p>
+                responsible for the data collection that supports the valuation
+                process
+              </p>
+            </div>
+            <div class="service-card">
+              <h5>Valuation data and business systems</h5>
+              <p>
+                responsible for providing data and systems support including
+                network and infrastructure, and computer assisted mass appraisal
+                modelling
+              </p>
+            </div>
+            <div class="service-card">
+              <img src="" alt="" />
+              <h5>Valuation Business Environment</h5>
+              <p>responsible for customer care, objections and appeals</p>
+            </div>
+            <div class="service-card">
+              <h5>Business Integration and Valuation Regulation</h5>
+              <p>
+                Responsible for the Rates Policy, oversight of valuations
+                related legislative requirements, reporting, and guidance on
+                business and development strategies
+              </p>
+            </div>
           </div>
         </div>
         <h4>Servitudes</h4>
@@ -165,31 +163,88 @@
             <h3>Documents and Archive</h3>
             <p>Information to download</p>
             <div id="document-menu">
-              <p class="path">><a>Documents Menu</a>/<a>Property Rates</a></p>
-              <ul>
-                <li>
-                  <a href="">Property Rates</a>
-                  <p class="extra-info">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Nulla doloremque odio tenetur nostrum dolor amet fugiat
-                    magnam quasi accusamus dolore?
-                  </p>
+              <ul id="level-1-menu">
+                <li id="menu-propertyrates">
+                  <a>Property Rates</a>
+                  <img
+                    src="icons/arrow_dropdown.png"
+                    class="arrow down"
+                    onclick="revealExtra('propertyrates')" />
+                  <img
+                    src="icons/arrow_dropup.png"
+                    class="arrow up invisible"
+                    onclick="hideExtra('propertyrates')" />
+                  <ul class="extra-info level-2-menu">
+                    <li>
+                      <a onclick="changeDocumentFrame('propertyrates',0)"
+                        >Property Rates Scheme</a
+                      >
+                    </li>
+                    <li>
+                      <a onclick="changeDocumentFrame('propertyrates',1)"
+                        >Rates Policy</a
+                      >
+                    </li>
+                  </ul>
                 </li>
-                <li>
-                  <a href="">Property Rates</a>
-                  <p class="extra-info">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Nulla doloremque odio tenetur nostrum dolor amet fugiat
-                    magnam quasi accusamus dolore?
-                  </p>
+                <li id="menu-generalroll">
+                  <a>General and Supplementary Valuation Roll</a>
+                  <img
+                    src="icons/arrow_dropdown.png"
+                    class="arrow down"
+                    onclick="revealExtra('generalroll')" />
+                  <img
+                    src="icons/arrow_dropup.png"
+                    class="arrow up invisible"
+                    onclick="hideExtra('generalroll')" />
+                  <ul class="extra-info level-2-menu">
+                    <li>
+                      <a href="changeDocumentFrame('generalroll',0)"
+                        >Property Search Guide 2022</a
+                      >
+                    </li>
+                    <li>
+                      <a onclick="changeDocumentFrame('generalroll',1)"
+                        >Municipal Property Rates Act S49 Notice of GV2022
+                        Valuation Roll</a
+                      >
+                    </li>
+                    <li>
+                      <a onclick="changeDocumentFrame('generalroll',2)"
+                        >Supplementary Valuations</a
+                      >
+                    </li>
+                    <li>
+                      <a href="changeDocumentFrame('generalroll',3)"
+                        >General and Supplementary FAQs</a
+                      >
+                    </li>
+                  </ul>
                 </li>
-                <li>
-                  <a href="">City of Valuers and Data Collectors</a>
-                  <p class="extra-info">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Nulla doloremque odio tenetur nostrum dolor amet fugiat
-                    magnam quasi accusamus dolore?
-                  </p>
+
+                <li id="menu-valuers">
+                  <a>City Valuers and Data Collectors</a>
+                  <img
+                    src="icons/arrow_dropdown.png"
+                    class="arrow down"
+                    onclick="revealExtra('valuers')" />
+                  <img
+                    src="icons/arrow_dropup.png"
+                    class="arrow up invisible"
+                    onclick="hideExtra('valuers')" />
+                  <ul class="extra-info level-2-menu">
+                    <li>
+                      <a href="changeDocumentFrame('generalroll',1)"
+                        >Property Search Guide 2022</a
+                      >
+                    </li>
+                    <li>
+                      <a href="changeDocumentFrame('generalroll',2)"
+                        >Municipal Property Rates Act S49 Notice of GV2022
+                        Valuation Roll</a
+                      >
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </div>
@@ -210,14 +265,14 @@
           id="gvr22-frame"
           class="invisible"
           src="https://web1.capetown.gov.za/web1/gv2022/SearchProperty"></iframe>
-          <p>
-            The <a onclick="changeToGVR()">General Valuation Roll (GVR)</a> is a
-            document containing the municipal valuations of all the registered
-            properties within the boundaries of the City of Cape Town and is
-            used to calculate the rates that property owners are required to
-            pay. You are able to object to your property valuation during the
-            objection period.
-          </p>
+        <p>
+          The <a onclick="changeToGVR()">General Valuation Roll (GVR)</a> is a
+          document containing the municipal valuations of all the registered
+          properties within the boundaries of the City of Cape Town and is used
+          to calculate the rates that property owners are required to pay. You
+          are able to object to your property valuation during the objection
+          period.
+        </p>
         <h4>Supplementary Valuation Roll (SVR)</h4>
         <p>
           The City must certify and publish at least one SVR per year. The SVR
@@ -254,19 +309,14 @@
           <iframe
             id="submission-form"
             class="form closed"
-            src="https://docs.google.com/forms/d/e/1FAIpQLSdoRZKVuL7TgrbANxSFTdoxuJxP02K3VyeruvOGURYdzIKosA/viewform?embedded=true"
-            style="overflow: hidden"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfS5FRbx0h04JPrrV-dKI_YMG98FEWRL3etvIFmeQiWvYylUw/viewform?embedded=true"
+            style="overflow: hidden; background-color: transparent"
             >Loading…</iframe
           >
         </map>
         <aside>
           <h3>Submissions</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe odio
-            asperiores, labore vero consectetur iure optio eaque illo ab
-            obcaecati, dolor quibusdam reprehenderit, id voluptatibus. Assumenda
-            repellendus distinctio hic impedit.
-          </p>
+          <p></p>
           <ul id="submission_button_set">
             <li>
               <button onclick="changeToForm('revenue')">Revenue Data</button>
@@ -278,23 +328,49 @@
               <button onclick="changeToForm('sales')">Sales Submissions</button>
             </li>
             <li>
-              <button onclick="changeToForm('renovations')">
+              <button onclick="changeToForm('renovation')">
                 Renovation Data
               </button>
             </li>
-            <li><button>Other Queries</button></li>
           </ul>
         </aside>
       </section>
 
       <section id="feedback">
         <h3>Feedback</h3>
+
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure aliquam
-          dolore pariatur perspiciatis quasi sapiente dolor explicabo ratione
-          voluptate, repellat quod tempora laborum fuga corrupti consectetur
-          nulla doloribus tempore obcaecati.
+          The Municipal Valuations Department is committed to providing
+          excellent service to Cape Town residents. We value your feedback and
+          want to hear about your experience using our website or contacting us
+          via phone or email.
         </p>
+        <h5>What We Want to Know:</h5>
+        <ul>
+          <li>
+            <span>Ease of Use:</span> Was the website easy to navigate? Did you
+            find the information you were looking for?
+          </li>
+          <li>
+            <span>Contact Channels:</span> Did you find it easy to get in touch
+            with us by phone or email? Were our response times satisfactory?
+          </li>
+          <li>
+            <span> Overall Experience:</span> What did you think of your overall
+            experience with the Municipal Valuations Department?
+          </li>
+        </ul>
+        <h5>How to Share Your Feedback:</h5>
+        <p>
+          We encourage you to share your thoughts and suggestions by:<br />
+
+          Completing this short survey: (Insert a link to a short, online
+          feedback form here)<br />
+          <span>Sending us an email:</span> [email address removed]<br />
+          <span> Calling us:</span> (Insert phone number here) - Our phone lines
+          are open weekdays from 8:00 AM to 4:30 PM.<br />
+        </p>
+        <p style="grid-column: 2" ;>Thank you for your time and feedback!</p>
       </section>
     </main>
     <footer id="contactus">

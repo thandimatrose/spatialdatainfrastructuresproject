@@ -3,9 +3,9 @@
   --body-text-color: #1e2e21;
   --accent-color: #198811;
   --accent-light-color: #88c659;
-  --body-font: "Neue Haas";
+  --body-font: "Neue Haas", sans-serif;
+  --heading-font: "Lato";
   --basic-dark-color: #262622;
-
   --basic-dark-color: #212121;
   --basic-light-color: #fff;
   --border-radius: 50%;
@@ -20,15 +20,34 @@ h2,
 h1 {
   text-decoration: none;
   font-style: normal;
-  font-weight: 200;
+  font-weight: 900;
   padding: 0;
   margin: 0;
   text-align: center;
 }
 h1 {
+  font-family: var(--heading-font);
+  font-size: 30px;
 }
 h2 {
   font-size: 15px;
+}
+
+h3 {
+  font-size: 30px;
+  font-style: normal;
+  margin: 10px 0px;
+  padding: 10px 10px;
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+}
+
+blockquote {
+  margin: 0px;
+  padding: 0px;
 }
 a {
   color: var(--accent-color);
@@ -71,13 +90,13 @@ body {
   border: 0px;
   color: var(--section -color);
   font-family: var(--body-font);
-  font-weight: 200;
+  font-weight: 300;
   overflow-x: hidden;
   overflow-y: visible;
 }
 
 body#body.fullscreen {
-    overflow-y: hidden;
+  overflow-y: hidden;
 }
 
 nav {
@@ -93,6 +112,20 @@ nav {
   overflow-y: hidden;
   align-content: center;
   align-content: center;
+  transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s;
+   -moz-transition: background-color 0.5s;
+     -o-transition: background-color 0.5s;
+        transition: background-color 0.5s;
+}
+
+nav:hover {
+  background: linear-gradient(rgba(255, 255, 255, 0.5), transparent);
+  /*box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );*/
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  
 }
 nav ul#nav-items {
   align-content: center;
@@ -106,14 +139,21 @@ nav ul#nav-items {
 nav ul#nav-items li {
   text-align: center;
   width: 100%;
+
 }
 nav ul#nav-items li a {
   color: var(--basic-dark-color);
+  transition: font-size 0.5s,color 0.5s;     /* transition is set to 'color 0.5s' !! */
+  -webkit-transition: color 0.5s, font-size 0.5s;
+   -moz-transition: color 0.5s, font-size 0.5s;
+     -o-transition: color 0.5s, font-size 0.5s;
+        transition: color 0.5s, font-size 0.5s;
 }
 nav ul#nav-items li a:hover {
   color: var(--accent-color);
   text-decoration: none;
-  font-weight: 600;
+  
+  
 }
 
 main {
@@ -127,12 +167,11 @@ section#geoportal {
   /*!!!!!!*/
   padding-top: 100px;
   display: grid;
-  grid-template-columns: 22% 78%;
+  grid-template-columns: 26% 74%;
 }
 section#geoportal map {
   padding: 0px;
   width: 100%;
-  height: 700px;
 }
 section#geoportal map#map-container.fullscreen {
   position: absolute;
@@ -142,8 +181,6 @@ section#geoportal map#map-container.fullscreen {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: red;
-  
 }
 
 section map div#content_heading {
@@ -161,73 +198,105 @@ section#geoportal map iframe {
   border-radius: 12px;
 }
 
-body.fullscreen section#geoportal map iframe  {
-    border-radius: 0;
-    width: 100%;
-    height: 100%;
-   
+body.fullscreen section#geoportal map iframe {
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
 }
 body.fullscreen nav {
-    display: none;
+  display: none;
 }
 
 body.fullscreen section#geoportal map button.fullscreen-button {
-    left: 20px;
-    bottom: 60px;
+  left: 20px;
+  bottom: 60px;
 }
-
 
 section#geoportal map button.fullscreen-button {
-    
-    position: relative;
-    width: 200px;
+  position: relative;
+  width: 200px;
 }
 section#geoportal map button.fullscreen-button:hover {
-    background-color: rgb(0, 0, 0);
-    color: white;
-    border: transparent 1px solid;
-    
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: transparent 1px solid;
 }
 section#geoportal map button#fullscreen-close-button {
-    display: none;
+  display: none;
 }
 
 section#geoportal map button#fullscreen-open-button {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+body.fullscreen section#geoportal aside {
+  position: fixed;
+  background-color: white;
+  border-radius: 12px;
+  width: 400px;
+  height: 270px;
+  bottom:30px;
+  padding: 15px;
+  right:10px;
+  z-index: 2;
+  font-size: 14px;
+}
+body.fullscreen section#geoportal aside h3 {
+  display: none;
 }
 
 body.fullscreen section#geoportal map button#fullscreen-open-button {
-    display: none;
+  display: none;
 }
 
 body.fullscreen section#geoportal map button#fullscreen-close-button {
-    display: block;
+  display: block;
+}
+body.fullscreen section#geoportal map img {
+  display: block;
+  position: relative;
+  right: 10px;
+  width: 150px;
+  left: 10px;
+  bottom: 200px;
+  transition: width 2s;
+}
+section#geoportal aside {
+  align-content: center;
+}
+section#geoportal aside div{
+  margin: 0px;
+  padding: 0px;
 }
 
-
-
+section#geoportal map img {
+  display: none;
+  width: 20px;
+  position: absolute;
+  transition: width 2s;
+}
 
 body.fullscreen section#geoportal map iframe {
-
 }
 section#title {
   padding: 20px;
   align-items: center;
   justify-content: center;
 }
-
+section#aboutus {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  
+}
 section#aboutus div.text-container {
-  column-count: 2;
+ 
 }
 section#aboutus div#services {
   display: grid;
-  grid-template-columns: calc(100%/3) calc(100%/3) calc(100%/3) ;
-
+  grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
 }
-section#aboutus div#services div.service-card{
-  
+section#aboutus div#services div.service-card {
   padding: 10px;
 }
 section#aboutus div#services div.service-card h5 {
@@ -290,6 +359,7 @@ section#documents {
   background-image: url(images/long-street.png);
   background-size: cover;
   background-attachment: fixed;
+  height: 600px;
 }
 section#documents div#document-container {
   display: grid;
@@ -335,9 +405,12 @@ section#documents
   div#document-menu
   ul
   li
-  p.extra-info {
+  ul.extra-info {
   margin-bottom: 2px;
   display: none;
+  transition: height 2s width 2s display 2s;
+  margin-left: 20px;
+  list-style: disc;
 }
 section#documents
   div#document-container
@@ -345,14 +418,67 @@ section#documents
   div#document-menu
   ul
   li
-  p.extra-info.expanded {
+  ul.extra-info
+  a {
+  color: black;
+}
+section#documents
+  div#document-container
+  aside
+  div#document-menu
+  ul
+  li
+  ul.extra-info.visible {
   display: block;
+  transition: height 2s width 2s display 2s;
+}
+
+section#documents
+  div#document-container
+  aside
+  div#document-menu
+  ul
+  li
+  img.arrow {
+  width: 20px;
+}
+
+section#documents
+  div#document-container
+  aside
+  div#document-menu
+  ul
+  li
+  img.invisible {
+  display: none;
 }
 
 section#gvr22 iframe {
   height: 530px;
   border-radius: 12px;
 }
+
+section#feedback {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  align-items: center;
+  line-height: 25px;
+}
+
+section#feedback span {
+  font-weight: 400;
+}
+
+section#feedback h5 {
+  
+  width: fit-content;
+  text-align: right;
+  padding-right: 15px;
+  font-size: large;
+  font-weight: 200;
+  background-color: lightblue;
+}
+
 
 section#home {
   background-image: url(images/citycentre.jpg);
@@ -499,8 +625,32 @@ section map iframe.invisible {
 /*FONTS*/
 
 @font-face {
-  font-family: "Neue Haas";
-  src: url(fonts/NeueHaas.TTF);
+  font-family: "Old Standard";
+  src: url(fonts/OLDSTANDARD-REGULAR.TTF);
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@900&display=swap");
+@font-face {
+  font-family: "TS Block";
+  src: url(fonts/TS\ BLOCK\ BOLD.TTF);
+}
+
+@font-face {
+  font-family: "Liberation Mono";
+  src: url(fonts/LIBERATIONMONO-REGULAR.TTF);
+}
+
+@font-face {
+  font-family: "Louis George Cafe";
+  src: url(fonts/LOUIS\ GEORGE\ CAFE.TTF);
+}
+
+@font-face {
+  font-family: "Gobold Extra";
+  src: url(fonts/GOBOLD\ EXTRA2.OTF);
+}
+
+@font-face {
+  font-family: "Neue Haas";
+  src: url(fonts/NHAASGROTESKTXPRO-RG.TTF);
+}
+
