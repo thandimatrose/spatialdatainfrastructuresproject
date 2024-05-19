@@ -108,7 +108,7 @@ body#body.fullscreen {
 
 nav {
   align-items: center;
-  padding: 3px;
+  
   height: 7vh;
   display: flex;
   position: fixed;
@@ -707,5 +707,128 @@ section map iframe.invisible {
 @font-face {
   font-family: "Neue Haas";
   src: url(fonts/NHAASGROTESKTXPRO-RG.TTF);
+}
+
+@media screen and (max-width: 1120px) {
+  main section {
+    padding: 0px 16%;
+  }
+
+  section#feedback {
+    padding: 0px 20%;
+  }
+
+  body.fullscreen section#geoportal aside{
+    width: 320px;
+  }
+  body.fullscreen section#geoportal aside h5{
+    display: none;
+  }
+  body.fullscreen section#geoportal aside ul{
+    display: none;
+  }
+
+}
+@media screen and (max-width: 1000px) {
+  
+}
+
+@media screen and (max-width: 970px) {
+  main section {
+    padding: 0px 10%;
+  }
+  section#feedback {
+    padding: 0px 15%;
+  }
+  body.fullscreen section#geoportal aside{
+    width: 250px;
+  }
+  
+}
+
+@media screen and (max-width: 900px) {
+  body.fullscreen section#geoportal aside{
+    width: 200px;
+  }
+}
+@media screen and (max-width: 800px) { 
+  section#documents div#document-container{
+    display: block;
+  }
+  section#documents div#document-container aside {
+    margin-right: 0px;
+  }
+  section#submissions {
+    grid-template-columns: 100%;
+    text-align: center;
+    justify-items: center;
+
+  }
+  section#submissions map {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width: 100%;
+   }
+   section#submissions aside {
+    grid-row-start: 0;
+    grid-row-end: 1;
+   }
+
+   section#aboutus {
+    grid-template-columns: 100%;
+   }
+   section#aboutus aside {
+    text-align: center;
+    padding: 0 30%;
+   }
+}
+@media screen and (max-width: 700px) {
+  section#gvr22 div#svr2022 {
+    grid-template-columns: 100%;
+  }
+  section#feedback {
+    display: block;
+    margin: 70px 0;
+  }
+}
+
+@media screen and (max-width: 760px) { 
+  body.fullscreen section#geoportal aside{
+    width: 170px;
+  }
+  main section {
+    margin-bottom: 20px;
+  }
+
+  
+  section#geoportal {
+    grid-template-columns: 100%;
+    padding-top: 20px;
+  }
+  section#geoportal aside {
+    margin-bottom: 30px;
+  }
+  section#gvr22 iframe{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  main section {
+    padding: 0px 7%;
+  }
+  section#feedback {
+    padding: 0px 10%;
+  }
+}
+
+@media screen and (max-width: 680px) { 
+  body.fullscreen section#geoportal aside{
+    display: none;
+  }
+
+  footer address{
+grid-template-columns: 100%;
+  }
 }
 
