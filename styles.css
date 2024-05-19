@@ -4,7 +4,7 @@
   --accent-color: #198811;
   --accent-light-color: #88c659;
   --body-font: "Neue Haas", sans-serif;
-  --heading-font: "Lato";
+  --heading-font: "Neue Haas";
   --basic-dark-color: #262622;
   --basic-dark-color: #212121;
   --basic-light-color: #fff;
@@ -32,6 +32,8 @@ h1 {
 }
 h2 {
   font-size: 15px;
+  font-weight: 400;
+  font-style: italic;
 }
 
 h3 {
@@ -125,10 +127,7 @@ nav {
 }
 
 nav:hover {
-  background: linear-gradient(rgba(255, 255, 255, 0.5), transparent);
-  /*box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );*/
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background-color: rgb(252, 252, 252);
 
   
 }
