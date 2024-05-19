@@ -1,9 +1,23 @@
 const files = {
   propertyrates: [
-    "17weY686mdczym2pR1gO8K_u8ApWM79Vn",
-    "1QV2jswXznnl96LX7rd2RL10XXbTlUuvf",
+    "https://drive.google.com/file/d/17weY686mdczym2pR1gO8K_u8ApWM79Vn/preview",
+    "https://drive.google.com/file/d/1QV2jswXznnl96LX7rd2RL10XXbTlUuvf/preview",
   ],
-  generalroll: ["", "1LX_ciONnfraaqVKKQKvpAx6R9keR__JM"],
+  generalroll: [
+    "",
+    "https://drive.google.com/file/d/1LX_ciONnfraaqVKKQKvpAx6R9keR__JM/preview",
+  ],
+  valuers: [
+    "https://drive.google.com/file/d/1PQ0WgBItKY0h9OWX_9h9Al7QSxZsiUj4/preview",
+    "https://drive.google.com/file/d/1bHNahs1Y5wA1ncwWn8FF5Mgl6v5EKpuZ/preview",
+  ],
+
+  homeowners: [
+    "https://odp-cctegis.opendata.arcgis.com/datasets/0a3546d3d67946649dca99d834a9d862_171/explore?location=-33.952467%2C18.631700%2C10.12",
+    "https://odp-cctegis.opendata.arcgis.com/datasets/59188852b4fa4df5b9d4cdd8c9bf7483_174/explore?location=-33.952467%2C18.631700%2C10.12",
+    "https://odp-cctegis.opendata.arcgis.com/datasets/acca2262282f415f87330d567a14fcb1_172/explore?location=-33.944976%2C18.527441%2C13.67",
+    "https://odp-cctegis.opendata.arcgis.com/datasets/62c7181531c643598927870cb3544dd3_173/explore?location=-33.952467%2C18.631700%2C10.12",
+  ],
 };
 const links = {
   revenue:
@@ -13,9 +27,8 @@ const links = {
   sales:
     "https://docs.google.com/forms/d/e/1FAIpQLSetLh2iLYRyAA6V6DyY8ucJMGtyO_UEbW7LdWoQ6DLUHqN2vw/viewform?embedded=true",
   renovation:
-    "https://docs.google.com/forms/d/e/1FAIpQLSdrWwMBfX_kz870Jc7lu-FSt98J6jLxZrcxf-AqSrbkBlfcuw/viewform?embedded=true",
+    "https://docs.google.com/forms/d/e/1FAIpQLSdrWwMBfX_kz870Jc7lu-FSt98J6jLxZrcxf-AqSrbkBlfcuw/viewform?embedded=true"
 };
-
 
 function moveTo(destination) {
   const element = document.getElementById(destination);
@@ -68,8 +81,7 @@ function changeToGVR() {
 }
 
 function changeDocumentFrame(menu, index) {
-  document.getElementById("downloads").src =
-    "https://drive.google.com/file/d/" + files[menu][index] + "/preview";
+  document.getElementById("downloads").src = files[menu][index];
 }
 
 function revealExtra(menuItem) {
@@ -113,5 +125,3 @@ function hideExtra(menuItem) {
     )
     .classList.remove("invisible");
 }
-
-

@@ -9,7 +9,8 @@
   --basic-dark-color: #212121;
   --basic-light-color: #fff;
   --border-radius: 50%;
-  --font-size: 25px;
+  --font-size: 24px;
+  --glassy: rgba(255, 255, 255, 0.341);
 }
 
 p {
@@ -43,6 +44,10 @@ h3 {
 
 h4 {
   text-align: center;
+}
+
+h5 {
+  margin-bottom: 5px;
 }
 
 blockquote {
@@ -160,14 +165,16 @@ main {
 }
 
 main section {
-  padding: 0px 20%;
+  padding: 0px 17.5%;
   margin-bottom: 100px;
 }
 section#geoportal {
   /*!!!!!!*/
   padding-top: 100px;
   display: grid;
-  grid-template-columns: 26% 74%;
+  grid-template-columns: 30% 70%;
+  text-align: justify;
+  align-items: start;
 }
 section#geoportal map {
   padding: 0px;
@@ -190,7 +197,22 @@ section map div#content_heading {
   background-color: white;
 }
 section#geoportal aside {
+  padding-top: 15px;
   padding-right: 10px;
+}
+
+section#geoportal aside ul{
+  list-style: circle;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+section#geoportal aside ul li span {
+  background-color: lightblue;
+  line-height: 27px;
+}
+section#geoportal aside h5 {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 section#geoportal map iframe {
   border: transparent;
@@ -235,7 +257,7 @@ body.fullscreen section#geoportal aside {
   background-color: white;
   border-radius: 12px;
   width: 400px;
-  height: 270px;
+  height: fit-content;
   bottom:30px;
   padding: 15px;
   right:10px;
@@ -244,6 +266,15 @@ body.fullscreen section#geoportal aside {
 }
 body.fullscreen section#geoportal aside h3 {
   display: none;
+}
+section#geoportal aside details {
+  margin-top: 10px;
+}
+section#geoportal aside details summary {
+  font-weight: 600;
+}
+section#geoportal aside details ul{
+  margin-bottom: 0px;
 }
 
 body.fullscreen section#geoportal map button#fullscreen-open-button {
@@ -265,6 +296,7 @@ body.fullscreen section#geoportal map img {
 section#geoportal aside {
   align-content: center;
 }
+
 section#geoportal aside div{
   margin: 0px;
   padding: 0px;
@@ -289,12 +321,14 @@ section#aboutus {
   grid-template-columns: 30% 70%;
   
 }
+
 section#aboutus div.text-container {
  
 }
 section#aboutus div#services {
   display: grid;
   grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+  align-items: start;
 }
 section#aboutus div#services div.service-card {
   padding: 10px;
@@ -308,7 +342,7 @@ section#aboutus div#services div.service-card h5 {
 
 section#aboutus div#services div.service-card p {
   padding: 10px;
-  padding: 0 10px;
+  padding: 0 0px;
   text-align: center;
 }
 
@@ -359,22 +393,23 @@ section#documents {
   background-image: url(images/long-street.png);
   background-size: cover;
   background-attachment: fixed;
-  height: 600px;
+ 
 }
 section#documents div#document-container {
   display: grid;
   grid-template-columns: 40% 60%;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.25);
+  background: var(--glassy);
   /*box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );*/
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid var(--glassy);
 }
 section#documents div#document-container iframe {
   width: 100%;
-  height: 400px;
+  height: 550px;
+  background-color: var(--glassy);
 }
 
 section#documents div#document-container aside {
@@ -458,15 +493,28 @@ section#gvr22 iframe {
   border-radius: 12px;
 }
 
+section#gvr22 div#svr2022 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  margin: 0px;
+}
+section#gvr22 div#svr2022 p {
+  padding: 10px;
+  margin: 0px;
+}
+
 section#feedback {
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 40% 60%;
   align-items: center;
   line-height: 25px;
+  padding: 0 25%;
+  text-align: justify;
 }
 
 section#feedback span {
-  font-weight: 400;
+  font-weight: 600;
 }
 
 section#feedback h5 {
@@ -509,17 +557,23 @@ section#home img {
 
 section#home div.title_wrapper {
   padding: 5% 10%;
-  background: rgba(255, 255, 255, 0.25);
+  background: var(--glassy);
   /*box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );*/
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid var(--glassy);
 }
 
 button {
   margin-left: auto;
   margin-right: auto;
+}
+section#home button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 170px;
 }
 
 section#home section h2 {
@@ -554,18 +608,20 @@ footer address {
   text-align: center;
   display: grid;
   grid-template-columns: 50% 50%;
-  background: rgba(255, 255, 255, 0.25);
+  background: var(--glassy);
   /*box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );*/
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  
+  border: 1px solid var(--glassy);
 }
 
 footer address div.irl-contact {
   background-color: rgba(255, 255, 255, 0.488);
   padding: 15px;
   text-align: left;
+  border-radius: 0 12px 12px 0 ;
 }
 footer div#credits {
   margin: 10px auto;

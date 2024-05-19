@@ -9,9 +9,11 @@
       href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
       integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
       crossorigin="anonymous" />
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SDI Project</title>
@@ -38,15 +40,15 @@
       <section id="home">
         <div class="title_wrapper">
           <img src="logos/coct.png" alt="City of Cape Town Logo" />
-          <h1>Property Valuations Portal</h1>
+          <h1>Land Valuations GeoPortal</h1>
           <address>
             <h2>your home in City of Cape Town</h2>
           </address>
           <p>
             Our department's vision is to be a world leader in the valuation of
             property, with a reputation for delivering reliable appraisals in a
-            professional manner. Our mission is to deliver a high quality and
-            impartial valuation service to our customers to sustain a cost
+            professional manner. <br />Our mission is to deliver a high quality
+            and impartial valuation service to our customers to sustain a cost
             effective, just and accurate valuation roll in the provision of fair
             and equitable rates for the City. Our property valuations are
             performed by competent and well-trained staff in accordance with the
@@ -61,21 +63,50 @@
       </section>
       <section id="geoportal">
         <aside class="slide">
-          <h3>GeoPortal</h3>
           <div>
             The City of Cape Town's Municipal Valuations Department is pleased
             to offer the Land Valuation Geoportal, a user-friendly online tool
             that allows you to explore property valuations across Cape Town.
           </div>
-          <div>
-            <h5>What You Can Do:</h5>
-            - View Property Valuations: See the latest municipal valuations for
-            properties throughout Cape Town displayed on a user-friendly map.<br />
-            - Zoom and Pan: Easily navigate the map to explore valuations in
-            specific areas. <br />
-            Transparency and Information: Gain valuable insights into property
-            values within your neighborhood or anywhere in Cape Town.
-          </div>
+          <h5>What You Can Do:</h5>
+          <ul>
+            <li>
+              <span> View Property Valuations:</span> See the latest municipal valuations for
+              properties throughout Cape Town displayed on a user-friendly map.
+            </li>
+            <li>
+              <span>Zoom & Pan:</span> Easily navigate the map to explore valuations in
+              specific areas.
+            </li>
+            <li>
+              <span>Transparency & Information:</span> Gain valuable insights into property
+              values within your neighborhood or anywhere in Cape Town.
+            </li>
+          </ul>
+          <details>
+            <summary>Map Metadata</summary>
+
+            <ul>
+              <li class="metadata">
+                <a
+                  href="https://development.demo.geonode.org/catalogue/#/dataset/505"
+                  >Valuations</a
+                >
+              </li>
+              <li class="metadata">
+                <a
+                  href="https://development.demo.geonode.org/catalogue/#/dataset/508"
+                  >Servitudes</a
+                >
+              </li>
+              <li class="metadata">
+                <a
+                  href="https://development.demo.geonode.org/catalogue/#/dataset/503"
+                  >Suburbs</a
+                >
+              </li>
+            </ul>
+          </details>
         </aside>
         <map id="map-container">
           <iframe
@@ -100,7 +131,7 @@
         </map>
       </section>
       <section id="aboutus">
-        <div>
+        <aside>
           <h3>About Us</h3>
 
           <blockquote
@@ -109,26 +140,26 @@
             to be used for the benefit of the citizens of Cape Town."
           </blockquote>
           <br />Louise Muller <br />Director: Valuations
-        </div>
+        </aside>
         <div>
           <h4>Our Services</h4>
           <div id="services">
             <div class="service-card">
-              <h5>Valuation operations</h5>
+              <h5>Valuation Operations</h5>
               <p>
                 Includes the implementation of valuation methods and approaches
                 and standards to produce the General Valuation Roll
               </p>
             </div>
             <div class="service-card">
-              <h5>Valuation surveys and quality</h5>
+              <h5>Valuation Surveys & Quality</h5>
               <p>
                 responsible for the data collection that supports the valuation
                 process
               </p>
             </div>
             <div class="service-card">
-              <h5>Valuation data and business systems</h5>
+              <h5>Valuation Data & Business systems</h5>
               <p>
                 responsible for providing data and systems support including
                 network and infrastructure, and computer assisted mass appraisal
@@ -136,11 +167,10 @@
               </p>
             </div>
             <div class="service-card">
-              <img src="" alt="" />
               <h5>Valuation Business Environment</h5>
               <p>responsible for customer care, objections and appeals</p>
             </div>
-            <div class="service-card">
+            <div class="service-card" style="grid-column: 2/4">
               <h5>Business Integration and Valuation Regulation</h5>
               <p>
                 Responsible for the Rates Policy, oversight of valuations
@@ -150,21 +180,16 @@
             </div>
           </div>
         </div>
-        <h4>Servitudes</h4>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-          incidunt possimus dolores vero quasi repudiandae id, magni velit alias
-          est?
-        </p>
       </section>
       <section id="documents">
         <div id="document-container">
           <aside>
-            <h3>Documents and Archive</h3>
-            <p>Information to download</p>
+            <h3>Documents & Archive</h3>
+            <p>Here you can find helpful resources related to your property valuation, including downloadable documents. Learn more about the valuation process, including FAQs and guides to understanding your property valuation notice. Objecting to your valuation is possible if you disagree with your property's valuation, download the necessary forms and guides to initiate an objection.</p>
             <div id="document-menu">
               <ul id="level-1-menu">
                 <li id="menu-propertyrates">
+
                   <a>Property Rates</a>
                   <img
                     src="icons/arrow_dropdown.png"
@@ -188,7 +213,7 @@
                   </ul>
                 </li>
                 <li id="menu-generalroll">
-                  <a>General and Supplementary Valuation Roll</a>
+                  <a>General Valuation Roll Guides</a>
                   <img
                     src="icons/arrow_dropdown.png"
                     class="arrow down"
@@ -234,75 +259,115 @@
                     onclick="hideExtra('valuers')" />
                   <ul class="extra-info level-2-menu">
                     <li>
-                      <a href="changeDocumentFrame('generalroll',1)"
-                        >Property Search Guide 2022</a
+                      <a onclick="changeDocumentFrame('valuers',0)"
+                        >Data Collectors List</a
                       >
                     </li>
                     <li>
-                      <a href="changeDocumentFrame('generalroll',2)"
-                        >Municipal Property Rates Act S49 Notice of GV2022
-                        Valuation Roll</a
+                      <a onclick="changeDocumentFrame('valuers',1)"
+                        >Municipal Collectors List</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li id="menu-homeowners">
+                  <a>Home Owners' Associations</a>
+                  <img
+                    src="icons/arrow_dropdown.png"
+                    class="arrow down"
+                    onclick="revealExtra('homeowners')" />
+                  <img
+                    src="icons/arrow_dropup.png"
+                    class="arrow up invisible"
+                    onclick="hideExtra('homeowners')" />
+                  <ul class="extra-info level-2-menu">
+                    <li>
+                      <a onclick="changeDocumentFrame('homeowners',0)"
+                        >Home Owners Associations 2021</a
+                      >
+                    </li>
+                    <li>
+                      <a onclick="changeDocumentFrame('homeowners',1)"
+                        >Home Owners Associations 2018</a
+                      >
+                    </li>
+                    <li>
+                      <a onclick="changeDocumentFrame('homeowners',2)"
+                        >Home Owners Associations 2015</a
+                      >
+                    </li>
+                    <li>
+                      <a onclick="changeDocumentFrame('homeowners',3)"
+                        >Home Owners Associations 2009</a
                       >
                     </li>
                   </ul>
                 </li>
               </ul>
             </div>
-            <p>Al information is property of the City of Cape Town</p>
-
-            <ul></ul>
+            <p>All information is property of the City of Cape Town</p>
           </aside>
-          <iframe
-            id="downloads"
-            class="invisible"
-            src="https://drive.google.com/embeddedfolderview?id=1_PBRgJxAAptrhvEqC8Uz-yUzWYWEWUXW#grid"
-            style="border: 0"></iframe>
+          <div id="document-heading">
+            <iframe
+              id="downloads"
+              class="invisible"
+              src="https://drive.google.com/embeddedfolderview?id=1ECY1lx9IJvVaRKjIJ0kxz_ZcueI10ogQ#grid"
+              style="border: 0"></iframe>
+          </div>
         </div>
       </section>
       <section id="gvr22">
         <h3>General Valuation Roll 2022</h3>
+        <p>
+          The
+          <a href="https://web1.capetown.gov.za/web1/gv2022/SearchProperty"
+            >General Valuation Roll (GVR)</a
+          >
+          is a document containing the municipal valuations of all the
+          registered properties within the boundaries of the City of Cape Town
+          and is used to calculate the rates that property owners are required
+          to pay. You are able to object to your property valuation during the
+          objection period.
+        </p>
         <iframe
           id="gvr22-frame"
           class="invisible"
           src="https://web1.capetown.gov.za/web1/gv2022/SearchProperty"></iframe>
-        <p>
-          The <a onclick="changeToGVR()">General Valuation Roll (GVR)</a> is a
-          document containing the municipal valuations of all the registered
-          properties within the boundaries of the City of Cape Town and is used
-          to calculate the rates that property owners are required to pay. You
-          are able to object to your property valuation during the objection
-          period.
-        </p>
         <h4>Supplementary Valuation Roll (SVR)</h4>
-        <p>
-          The City must certify and publish at least one SVR per year. The SVR
-          contains details of properties that were not included in the last GV
-          Roll, as well as any properties that have been changed. According to
-          the amended Local Government Municipal Property Rates Act(Act 6 of
-          2004) , a property is determined to have changed, if it has: been
-          identified as having been previously incorrectly valued; been
-          incorrectly recorded in the last GVR because of a clerical or typing
-          error; been omitted from the valuation roll; been recently added to
-          the municipality; been subdivided or consolidated; changed in category
-          had a building plan signed off; had a significant increase or decrease
-          in market value since the last GVR; If your property is included in an
-          SVR, the City will post two notices to you.
-        </p>
-        <p>
-          Notice 1 will be posted immediately after the SV valuation is
-          completed, and will inform you of your right to request a review. You
-          will need to email
-          <a href="mailto:valuationsobjection@capetown.gov.za"
-            >valuationsobjection@capetown.gov.za</a
-          >
-          to obtain the official review form and return the completed form to
-          the same address. <br />Notice 2 will be posted to you after the SV
-          Roll is certified. This notice will inform you of your right to
-          object, and outline the process for submitting an objection. You can
-          obtain an official form by emailing
-          valuationsobjection@capetown.gov.za and must return the completed form
-          to the same address.
-        </p>
+          <div id="svr2022">
+          
+          <p>
+            The City must certify and publish at least one SVR per year. The SVR
+            contains details of properties that were not included in the last GV
+            Roll, as well as any properties that have been changed. According to
+            the amended Local Government Municipal Property Rates Act(Act 6 of
+            2004) , a property is determined to have changed, if it has: been
+            identified as having been previously incorrectly valued; been
+            incorrectly recorded in the last GVR because of a clerical or typing
+            error; been omitted from the valuation roll; been recently added to
+            the municipality; been subdivided or consolidated; changed in
+            category had a building plan signed off; had a significant increase
+            or decrease in market value since the last GVR; If your property is
+            included in an SVR, the City will post two notices to you.
+          </p>
+        
+          <p>
+            Notice 1 will be posted immediately after the SV valuation is
+            completed, and will inform you of your right to request a review.
+            You will need to email
+            <a href="mailto:valuationsobjection@capetown.gov.za"
+              >valuationsobjection@capetown.gov.za</a
+            >
+            to obtain the official review form and return the completed form to
+            the same address. <br />Notice 2 will be posted to you after the SV
+            Roll is certified. This notice will inform you of your right to
+            object, and outline the process for submitting an objection. You can
+            obtain an official form by emailing
+            valuationsobjection@capetown.gov.za and must return the completed
+            form to the same address.
+          </p>
+        </div>
       </section>
       <section id="submissions">
         <map>
@@ -363,12 +428,9 @@
         <h5>How to Share Your Feedback:</h5>
         <p>
           We encourage you to share your thoughts and suggestions by:<br />
-
-          Completing this short survey: (Insert a link to a short, online
-          feedback form here)<br />
-          <span>Sending us an email:</span> [email address removed]<br />
-          <span> Calling us:</span> (Insert phone number here) - Our phone lines
-          are open weekdays from 8:00 AM to 4:30 PM.<br />
+          <span>Sending us an email: </span>valuations@capetown.gov.za<br />
+          <span> Calling us: </span>086 010 3089 - Our phone lines are open
+          weekdays from 8:00 AM to 4:30 PM.<br />
         </p>
         <p style="grid-column: 2" ;>Thank you for your time and feedback!</p>
       </section>
